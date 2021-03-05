@@ -27,9 +27,9 @@ class Service
     def execute
       john = Student.new('John', 32)
 
-      restore target: obj, if_errors: [NoMethodError] do |obj|
+      restore target: john, if_errors: [NoMethodError] do |obj|
         # logic which modifies object
-        john.age = 40
+        obj.age = 40
         
         # call method which raises NoMethodError (as an example)
         obj.call_some_not_existing_method
