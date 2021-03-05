@@ -27,7 +27,7 @@ module Undoer
       cloned_target = target.respond_to?('new') ? target.clone : Marshal.load( Marshal.dump(target) )
       yield(target)
     rescue *errors => e
-      raise ArgumentError, "not restoreable!" if target.is_any?(NOT_SUPPORTED)
+      raise e, "not restoreable!" if NOT_SUPPORTED.select { |k| target.is_a?(k) }.any?
       target.deep_copy!(cloned_target)
     end
   end

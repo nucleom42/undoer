@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'net/http'
 
 describe Undoer do
   let(:klass) { Class.new { include Undoer } }

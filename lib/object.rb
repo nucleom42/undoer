@@ -5,10 +5,4 @@ class Object
       self.instance_variable_set(instance_var, from_instance_var)
     end
   end
-
-  def is_any?(*klasses)
-    klasses.flatten.any? do |klass|
-      self.is_a?(klass)
-    end
-  end
 end

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    undoer (0.1.1)
+    undoer (0.1.2)
 
 GEM
   remote: http://rubygems.org/
