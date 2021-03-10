@@ -4,16 +4,16 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/nucleom42/undoer.svg)
 ![Gem](https://img.shields.io/gem/v/undoer.svg)
 
-Problem:
+**Problem:**
 
 * Need to restore initial object if specific errors occurred in the similar way of transaction block works in Active Records
 
-Solution:
+**Solution:**
 1. Define errors array for restoring original mutable object
 2. Yield logic which changes object
 3. Get restored object if mentioned errors occurred
 
-Notes:
+**Notes:**
 
 Works based on deep copying approach injected in Ruby classes. Won't work with immutable objects like Numeric, Boolean ..
 
