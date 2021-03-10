@@ -7,7 +7,7 @@ require 'object'
 require 'class'
 
 module Undoer
-  NOT_SUPPORTED  = [Numeric, TrueClass, FalseClass, Symbol, Numeric].freeze
+  NOT_SUPPORTED  = [Numeric, TrueClass, FalseClass, Symbol].freeze
   
   def self.included(base)
     base.extend(ClassMethods)
